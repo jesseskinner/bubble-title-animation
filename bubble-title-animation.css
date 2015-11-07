@@ -1,0 +1,46 @@
+@keyframes bubble-title-animation-appear {
+	0% { font-size: 1%; opacity: 1; }
+	33% { font-size: 133%; }
+	40% { font-size: 133%; }
+	50% { font-size: 100%; opacity: 1; }
+	100% { font-size: 100%; opacity: 1; }
+}
+
+@keyframes bubble-title-animation-middle {
+	0% { font-size: 100%; opacity: 1; }
+	100% { font-size: 100%; opacity: 1; }
+}
+
+@keyframes bubble-title-animation-disappear {
+	0% { font-size: 100%; opacity: 1; }
+	25% { font-size: 133%; }
+	33% { font-size: 133%; opacity: 1; }
+	100% { font-size: 1%; opacity: 0; }
+}
+
+.bubble-title-animation table {
+	margin: 0 auto;
+	table-layout: fixed;
+}
+
+.bubble-title-animation div {
+	position: absolute;
+	width: 100%;
+}
+
+.bubble-title-animation td {
+	animation: bubble-title-animation-appear 1.5s 0s,
+		bubble-title-animation-middle 1s 1.5s,
+		bubble-title-animation-disappear 1s 2.5s;
+	text-align: center;
+	opacity: 0;
+	font-size: 1%;
+	vertical-align: bottom;
+	position: relative;
+	word-wrap: break-word;
+}
+
+.bubble-title-animation span {
+	margin-left: -100%;
+    margin-right: -100%;
+}
